@@ -24,24 +24,22 @@
 
 
 let out = document.querySelector('.out');
-let in1 = document.querySelector('.i-1');
-// let in2 = document.querySelector('.i-2');
+// let out2 = document.querySelector('.out2');
+
 let button = document.querySelector('button');
- 
+
 
 button.onclick = () => {
-    let a = in1.value;
+    
+    
+    out.innerHTML = '<input type="text" class="i-1"><button class="bt2">push</button>';
+    let bt2 = document.querySelector('.bt2');
+    let input = document.querySelector('.i-1')
+    bt2.onclick = () => {
+        console.log(input.value);
+    }
+}
 
-if ( a > 1 && a < 32 ) {
-    out.innerHTML = '1';
-} else if ( a > 33 && a < 43 ) {
-    out.innerHTML = '2';
-} else if ( a > 44 && a < 64 ) {
-    out.innerHTML = '3';
-} else {
-    out.innerHTML = '0';
-}
-}
 
 
 
