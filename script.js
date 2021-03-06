@@ -23,26 +23,35 @@
 
 
 
-let out = document.querySelector('.out');
-// let out2 = document.querySelector('.out2');
+// let out = document.querySelector('.out');
+// // let out2 = document.querySelector('.out2');
 
+// let button = document.querySelector('button');
+
+
+// button.onclick = () => {
+    
+    
+//     out.innerHTML = '<input type="text" class="i-1"><button class="bt2">push</button>';
+//     let bt2 = document.querySelector('.bt2');
+//     let input = document.querySelector('.i-1')
+//     bt2.onclick = () => {
+//         console.log(input.value);
+//     }
+// }
+
+
+let input = document.querySelector('.i-1');
+let out = document.querySelector('.out');
 let button = document.querySelector('button');
+let select = document.querySelector('select');
 
 
 button.onclick = () => {
     
+    out.innerHTML = select.value;
     
-    out.innerHTML = '<input type="text" class="i-1"><button class="bt2">push</button>';
-    let bt2 = document.querySelector('.bt2');
-    let input = document.querySelector('.i-1')
-    bt2.onclick = () => {
-        console.log(input.value);
-    }
 }
-
-
-
-
 
 
 
