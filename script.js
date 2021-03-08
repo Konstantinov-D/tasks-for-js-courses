@@ -42,27 +42,47 @@
 
 
 
-// Task 7
-// Есть input i-7 куда пользователь может ввести число больше нуля (проверок не делаем, принимаем как факт). По нажатию кнопки b-7 должна запускаться функция t7, которая выводит в out-7 числа от введенного пользователем до нуля включительно. Разделитель пробел. Если пользователь ввел 4 и нажал кнопку, мы получим:
+// Task 9
+// Есть input i-91 и i-92 куда пользователь может ввести числа. По нажатию кнопки b-9 должна запускаться функция t9, которая выводит в out-9 числа от меньшего введенного до большего включительно, с шагом 1. Разделитель пробел. Если пользователь ввел 4 и 8 и нажал кнопку, мы получим:
 
-// 4 3 2 1 0
-// Задача решается с помощью цикла.
+// 4 5 6 7 8
+// если ввел 8 и 6, то получим
+// 6 7 8
+// Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
+
 
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
-let input = document.querySelector('input');
+let input1 = document.querySelector('.inp1');
+let input2 = document.querySelector('.inp2');
 
 
 button.onclick = () => {
   let res = '';
-  let b = input.value;
-  while (b >= 0) {
-    res = res + b;
-    b--;
+  let inp1 = input1.value;
+  let inp2 = input2.value;
+
+  if (inp1 < inp2) {
+    for (let i = inp1; i < inp2; i++ ) {
+      res = res + inp1;
+      inp1++;
+    out.innerHTML = res;
+    }
+  } else if (inp2 < inp1) {
+    for (let i = inp2; i < inp1; i++ ) {
+      res = res + inp2;
+    out.innerHTML = res;
+    inp2++;
+    }
+
+  } else {
+    out.innerHTML = 'они равны';
+  }
+  
 }
-  out.innerHTML = res;
-}
+  
+
     
 
 
