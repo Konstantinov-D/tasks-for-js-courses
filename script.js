@@ -42,11 +42,13 @@
 
 
 
-// Task 10
-// Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно. Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
+// Task 11
+// Кнопка b-11 запускает функцию t11. Функция должна: получить все div.div-11 перебрать их с помощью цикла. Обращение к div выглядит так elem[i] вывести в out-11 содержимое каждого блока. Разделитель - пробел. В результате должно получиться так:
+
+// one 3 4 two
 
 
-
+let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 // let input1 = document.querySelector('.inp1');
@@ -54,13 +56,10 @@ let button = document.querySelector('button');
 
 
 button.onclick = () => {
-  let res = '';
-  for (let i = 1950; i <= 2000; i = i + 2) {
-
-    res = res + i + ' ';
-    out.innerHTML = res;
+  for (let i = 0; i < div.length; i++ ){
+    div[i].style.background = 'orange';
+    console.log(div[i]);
   }
-  
 }
   
 
