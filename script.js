@@ -42,24 +42,28 @@
 
 
 
-// Task 11
-// Кнопка b-11 запускает функцию t11. Функция должна: получить все div.div-11 перебрать их с помощью цикла. Обращение к div выглядит так elem[i] вывести в out-11 содержимое каждого блока. Разделитель - пробел. В результате должно получиться так:
+// Task 15
+// Кнопка b-15 запускает функцию t15 Функция должна выводить следующую последовательность в out-15:
 
-// one 3 4 two
+// 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
+// Для вывода использовать цикл.
 
 
-let div = document.querySelectorAll('.item')
+// let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 // let input1 = document.querySelector('.inp1');
 // let input2 = document.querySelector('.inp2');
 
-
+res = '';
 button.onclick = () => {
-  for (let i = 0; i < div.length; i++ ){
-    div[i].style.background = 'orange';
-    console.log(div[i]);
+  
+  for (let i = 0; i < 11; i++) { 
+    console.log(10-i); 
+    console.log(i);
+    res += i + ' ' + (10-i) + ' ';
   }
+  out.innerHTML = res;
 }
   
 
