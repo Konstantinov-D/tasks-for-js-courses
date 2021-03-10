@@ -42,42 +42,23 @@
 
 
 
-// Task 9
-// Есть input i-91 и i-92 куда пользователь может ввести числа. По нажатию кнопки b-9 должна запускаться функция t9, которая выводит в out-9 числа от меньшего введенного до большего включительно, с шагом 1. Разделитель пробел. Если пользователь ввел 4 и 8 и нажал кнопку, мы получим:
-
-// 4 5 6 7 8
-// если ввел 8 и 6, то получим
-// 6 7 8
-// Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
+// Task 10
+// Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно. Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
-let input1 = document.querySelector('.inp1');
-let input2 = document.querySelector('.inp2');
+// let input1 = document.querySelector('.inp1');
+// let input2 = document.querySelector('.inp2');
 
 
 button.onclick = () => {
   let res = '';
-  let inp1 = input1.value;
-  let inp2 = input2.value;
+  for (let i = 1950; i <= 2000; i = i + 2) {
 
-  if (inp1 < inp2) {
-    for (let i = inp1; i < inp2; i++ ) {
-      res = res + inp1;
-      inp1++;
+    res = res + i + ' ';
     out.innerHTML = res;
-    }
-  } else if (inp2 < inp1) {
-    for (let i = inp2; i < inp1; i++ ) {
-      res = res + inp2;
-    out.innerHTML = res;
-    inp2++;
-    }
-
-  } else {
-    out.innerHTML = 'они равны';
   }
   
 }
