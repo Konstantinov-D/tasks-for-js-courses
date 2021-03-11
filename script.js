@@ -1,30 +1,22 @@
 
 
 
-// Task 6
-// С помощью вложенных циклов, нарисуйте строку:
-
-//  10x01x
-//  10x01x
-//  10x01x
-// Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1 либо х.
+// Task 7
+// *
+// **
+// ***
+// ****
+// Внешний цикл выводит перенос строки br. Вложенный цикл запускается от нуля до i и рисует звездочку.
 
 let out = document.querySelector('.out');
-let button = document.querySelector('button');
 
-for (let i = 0; i < 3; i++) {
-  for (let k = 1; k < 7; k++) {
-      if ((k % 2 == 0) && !(k % 3 == 0)) {
-          out.innerHTML += '0';
-      }else if (k % 3 == 0) {
-        out.innerHTML += 'x';
-    } else {
-          out.innerHTML += 1;
-      }
-  }
-  out.innerHTML += '<br>';
+
+for (let i = 0; i < 5; i++) {
+  for (let k = 0; k <= i; k++) {
+		out.innerHTML += '*';
+	}
+	out.innerHTML += '<br>';
 }
-
 
 
   
