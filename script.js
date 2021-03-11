@@ -1,30 +1,25 @@
 
 
 
-// Task 4
+// Task 6
 // С помощью вложенных циклов, нарисуйте строку:
 
-// 1_1 2 3 4 5 2_1 2 3 4 5 3_1 2 3 4 5
-// Task 5
-// С помощью вложенных циклов, нарисуйте строку:
+//  10x01x
+//  10x01x
+//  10x01x
+// Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1 либо х.
 
-// 101010
-// 101010
-// 101010
-// Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1.
-
-
-
-// let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 
 for (let i = 0; i < 3; i++) {
-  for (let k = 0; k < 6; k++) {
-      if (k % 2 == 0) {
+  for (let k = 1; k < 7; k++) {
+      if ((k % 2 == 0) && !(k % 3 == 0)) {
+          out.innerHTML += '0';
+      }else if (k % 3 == 0) {
+        out.innerHTML += 'x';
+    } else {
           out.innerHTML += 1;
-      } else {
-          out.innerHTML += 0;
       }
   }
   out.innerHTML += '<br>';
