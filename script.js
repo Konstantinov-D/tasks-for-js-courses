@@ -1,27 +1,26 @@
 
-
-
-
-// 5	
-// С помощью вложенных циклов и символа * нарисуйте:
-
-//      *****
-//     *****
-//    *****
 // 6	
 // С помощью вложенных циклов и символа * нарисуйте:
-let out = document.querySelector('.out');
-let space = '&nbsp';
-let res = '';
-for (let i = 3; i > 0; i--) {
-  for (let j = 0; j < i; j++) {
-    res += space;
-  }
-  for (let k = 0; k < 5; k++) {
 
+//    *
+//    **
+//    ***
+//    **
+//    *
+let out = document.querySelector('.out');
+// let space = '&nbsp';
+let res = '';
+
+for (let i = 1; i < 6; i++) {
+  if (i > 3) {
+    for (let j = 6; j > i; j--) {
+      res += '*';
+      }
+  } else {
+  for (let k = 0; k < i; k++) {
     res += '*';
-   
-	}
+    }
+  }
 	res += '<br>';
 }
   out.innerHTML = res;
