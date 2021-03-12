@@ -1,28 +1,28 @@
 
-// 6	
-// С помощью вложенных циклов и символа * нарисуйте:
+// 12	
+// С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла (четные заменены на X):
 
-//    *
-//    **
-//    ***
-//    **
-//    *
+//   5
+//   X  X
+//   3  3  3
+//   X  X  X  X
+//   1  1  1  1  1
 let out = document.querySelector('.out');
 // let space = '&nbsp';
 let res = '';
 
-for (let i = 1; i < 6; i++) {
-  if (i > 3) {
-    for (let j = 6; j > i; j--) {
-      res += '*';
-      }
-  } else {
-  for (let k = 0; k < i; k++) {
-    res += '*';
+for (let i = 5; i > 0; i--) {
+
+  for (let k = 6; k > i; k--) {
+    if (i%2==0){
+      res += 'x';
+    } else {
+    res += i;
     }
   }
+  
 	res += '<br>';
-}
+  }
   out.innerHTML = res;
 
   
