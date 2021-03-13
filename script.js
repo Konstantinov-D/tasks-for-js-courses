@@ -1,14 +1,13 @@
+// Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра.
 
-// Task 1
-// Напишите функцию t1, которая при нажатии кнопки выводит в out-1 переменную a1.
-
-
-let out = document.querySelector('.out');
-let a1 = 8;
-function t1() {
-  out.innerHTML = a1;
+function t2(a,b) {
+  return Math.floor(Math.random() * (b - a + 1)) + a;
 }
-document.querySelector('button').onclick = t1;
+document.querySelector('button').onclick =function() {
+    document.querySelector('.out').textContent = t2(1,9);
+}
+
+
 
 
 
