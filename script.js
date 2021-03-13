@@ -1,15 +1,13 @@
-// Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра.
 
-function t2(a,b) {
-  return Math.floor(Math.random() * (b - a + 1)) + a;
+// Task 8
+// Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки. Т.е. принимает _hello_ (где знак _ символизирует пробел), а возвращает hello. Для удаления пробелов - используйте trim.
+
+function t8() {
+  var string='   This is test    ';
+  string = string.trim();
+  console.log(string);
 }
-document.querySelector('button').onclick =function() {
-    document.querySelector('.out').textContent = t2(1,9);
-}
-
-
-
-
+t8();
 
 
 
