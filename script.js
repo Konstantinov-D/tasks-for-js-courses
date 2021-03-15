@@ -1,39 +1,23 @@
-// Task 9
-// Есть input i-91 и i-92 куда пользователь может ввести числа. По нажатию кнопки b-9 должна запускаться функция f9, которая выводит в out-9 числа от меньшего введенного до большего включительно, с шагом 1. Разделитель пробел. Если пользователь ввел 4 и 8 и нажал кнопку, мы получим:
+// Task 11
+// Кнопка b-11 запускает функцию t11. Функция должна: получить все div.div-11 перебрать их с помощью цикла while. Обращение к div выглядит так elem[i] вывести в out-11 содержимое каждого блока. Разделитель - пробел. В результате должно получиться так:
 
-// 4 5 6 7 8
-// если ввел 8 и 6, то получим
-// 6 7 8
-// Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл while.
+// one 3 4 two
 
+let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
-let input1 = document.querySelector('.inp1');
-let input2 = document.querySelector('.inp2');
-let res = '';
+// let input1 = document.querySelector('.inp1');
+// let input2 = document.querySelector('.inp2');
+let i = 0;
 
 button.onclick = () => {
-  
-  let inp1 = input1.value;
-  let inp2 = input2.value;
-
-  if (inp1 > inp2) {
-    while (inp1 >= inp2) {
-      res = res + inp1 + ' ';
-      inp1--;
-      out.innerHTML = res;
-    }
-  } else if (inp2 > inp1) {
-    while (inp2 >= inp1) {
-        res = res + inp2 + ' ';
-        inp2--;
-        out.innerHTML = res;
-      }
-  } else {
-    out.innerHTML = 'они равны';
+  while (i < div.length){
+    div[3].style.background = 'orange';
+    console.log(div[i]);
+    i++;
   }
-
 }
+
 
   
 
