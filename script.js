@@ -1,5 +1,5 @@
-// Task 1
-// Добавьте кнопку .b-1, которая запускает функцию f1. Функция присваивает блоку .out-1 ширину 200px, высоту 40px.
+// Task 2
+// По нажатию кнопки b-2 запускайте функцию f2, которая присваивает блоку out-2 класс .bg-2.
 
 let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
@@ -7,9 +7,7 @@ let button = document.querySelector('button');
 
 
 button.onclick = () => {
-  out.style.width = '200px';
-  out.style.height = '40px';
-  out.style.backgroundColor = 'red';
+  out.classList.add('bg-2');
 }
 
 
