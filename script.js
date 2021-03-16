@@ -1,5 +1,5 @@
-// Task 2
-// По нажатию кнопки b-2 запускайте функцию f2, которая присваивает блоку out-2 класс .bg-2.
+// Task 4
+// По нажатию кнопки b-4 запускайте функцию f4, которая делает toggle класса bg-4 для блока out-4.
 
 let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
@@ -7,7 +7,7 @@ let button = document.querySelector('button');
 
 
 button.onclick = () => {
-  out.classList.add('bg-2');
+  button.classList.toggle('bg-2');
 }
 
 
