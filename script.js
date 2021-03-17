@@ -1,18 +1,19 @@
-// Task 9
-// Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
+// Task 11
+// Добавьте кнопку .b-11, которая запускает функцию f11. Функция создает через createElement div c текстом 25 и добавляет его через append в out-11.
 
 
 let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
-let button = document.querySelectorAll('button');
-let p = document.querySelectorAll('p');
+let button = document.querySelector('button');
 
 
-for (let i=0; i<button.length; i++){
-  button[i].onclick = () => {
-    button[i].classList.add('bg')
+
+button.onclick = () => {
+  let newDiv = document.createElement("div");
+      newDiv.innerHTML = "252525"; 
+      out.append(newDiv)
   }
-}
+
 
 
 
