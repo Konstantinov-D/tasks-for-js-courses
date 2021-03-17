@@ -1,16 +1,19 @@
-// По нажатию кнопки b-7 запускайте функцию f7, которая присваивает блокам out-7 класс .bg-7. Обратите внимание, что данных блоков больше одного, следовательно нужен цикл.
+// Task 9
+// Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
 
 
 let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
-let button = document.querySelector('button');
+let button = document.querySelectorAll('button');
 let p = document.querySelectorAll('p');
 
-button.onclick = () => {
-  for (let i = 0; i < p.length; i++) {
-    p[i].classList.add('bg');
+
+for (let i=0; i<button.length; i++){
+  button[i].onclick = () => {
+    button[i].classList.add('bg')
   }
 }
+
 
 
 
