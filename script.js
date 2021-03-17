@@ -1,5 +1,5 @@
-// Task 4
-// По нажатию кнопки b-4 запускайте функцию f4, которая делает toggle класса bg-4 для блока out-4.
+// Task 5
+// По нажатию b-5 запускайте функцию f5, которая проверяет наличие класса bg-4 у блока out-4 (да, именно bg-4 у out-4 ). Результат - true или false, выводите в out-5.
 
 let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
@@ -8,6 +8,8 @@ let button = document.querySelector('button');
 
 button.onclick = () => {
   button.classList.toggle('bg-2');
+  let a = button.classList.contains('bg-2');
+  out.innerHTML = a;
 }
 
 
