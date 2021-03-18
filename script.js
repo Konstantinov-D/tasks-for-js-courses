@@ -1,21 +1,18 @@
-// Task 17
-// Добавьте кнопку .b-17, которая запускает функцию f17. Функция создает через createElement div c текстом 17 и добавляет ему класс bg-17. Созданный div заменяет out-17 с помощью replaceWith.
+// Task 20
+// Добавьте кнопку .b-20, которая запускает функцию f20. Функция с помощью setAttribute присваивает атрибут title="go" в div.out-20.
 
 
 
-let div = document.querySelectorAll('.item')
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 
 
-
 button.onclick = () => {
-  let newDiv = document.createElement("div");
-      newDiv.innerHTML = "14"; 
-      newDiv.classList.add('bg'); 
-        out.replaceWith(newDiv);
+  let p = document.querySelector('p');
+  p.setAttribute('title',"go");
+  out.innerHTML = p;
   }
-  $(что заменить).replaceWith(чем заменить)
+  
 
 
 
