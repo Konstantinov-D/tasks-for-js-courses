@@ -1,5 +1,5 @@
-// Task 14
-// Добавьте кнопку .b-14, которая запускает функцию f14. Функция создает через createElement div c текстом 14 и добавляет ему класс bg-14. Созданный div добавляется в out-14 с помощью prepend.
+// Task 17
+// Добавьте кнопку .b-17, которая запускает функцию f17. Функция создает через createElement div c текстом 17 и добавляет ему класс bg-17. Созданный div заменяет out-17 с помощью replaceWith.
 
 
 
@@ -13,9 +13,9 @@ button.onclick = () => {
   let newDiv = document.createElement("div");
       newDiv.innerHTML = "14"; 
       newDiv.classList.add('bg'); 
-        out.prepend(newDiv);
+        out.replaceWith(newDiv);
   }
-
+  $(что заменить).replaceWith(чем заменить)
 
 
 
