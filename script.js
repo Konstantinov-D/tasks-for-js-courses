@@ -19,14 +19,16 @@ let button = document.querySelector('button');
 
 
 button.onclick = () => {
-  ar =  [3, 1, 2, 6, 10, 1, 30, 1, 9, 40, 22, 10];
+    let ar =  [3, 6, 2, 6, 10, 1, 30, 7, 9, 40, 22, 10];
     let min = ar[0];
+    let minIdx = 0;
     for (let i = 0; i < ar.length; i++) {
       if (ar[i] < min) {
          min = ar[i];
+         minIdx = i;
       }
     }
-    out.innerHTML = 'min: ' + min;
+    out.innerHTML = 'min: ' + minIdx;
   }
   
 
