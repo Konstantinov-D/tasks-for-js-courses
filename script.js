@@ -10,7 +10,7 @@ let button = document.querySelector('button');
 button.onclick = () => {
     let ar = [1,2,3,4,5,6,7,8];
     ar[8] = 'turkey';
-    out.innerHTML = ar[0]+ ' ' + ar[8];
+    out.innerHTML = ar[ar.length-1];
   }
   
 
