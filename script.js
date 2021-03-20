@@ -1,8 +1,6 @@
- // Task 14
-  // Используя цикл выведите на страницу массив ar14 в обратном порядке. Разделитель - пробел.
-  
-  // ar14 = [1, 2, 3, 'hello', 66];
-
+  // ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+  // Task 16
+  // Выполните перебор массива arr16. Четные элементы добавьте в массив ar16_even, нечетные в ar16_odd. Добавление в массив - по индексу, а не +=!!!!!. Протестируйте задачу на повторный запуск! Выведите ar16_odd в div.out-16-odd, а ar16_even в div.out-16-even. Разделитель - пробел.
 
 
 let out = document.querySelector('.out');
@@ -10,12 +8,21 @@ let button = document.querySelector('button');
 
 
 button.onclick = () => {
-    ar = [1, 2, 3, 'hello', 66];
-    for (let i = ar.length - 1; i >= 0; i--){
-      out.innerHTML += ar[i] + ' ';
+    ar = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+    even = '';
+    notEven = '';
+    for (let i = 0; i < ar.length; i++) {
+      if (ar[i]%2==0){
+        even += ar[i] + ' ';
+      }else{
+        notEven += ar[i] + ' ';
+      }
     }
+    out.innerHTML = even + '<br>' + notEven;
   }
   
+
+
 
 
   // Task 1
