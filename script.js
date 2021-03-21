@@ -19,16 +19,12 @@ let button = document.querySelector('button');
 
 
 button.onclick = () => {
-    let ar =  [3, 6, 2, 6, 10, 1, 30, 7, 9, 40, 22, 10];
-    let min = ar[0];
-    let minIdx = 0;
+    let ar =  [4,5,6,7,8,9,10];
+    let sum = 0;
     for (let i = 0; i < ar.length; i++) {
-      if (ar[i] < min) {
-         min = ar[i];
-         minIdx = i;
-      }
+      sum += ar[i];
     }
-    out.innerHTML = 'min: ' + minIdx;
+    out.innerHTML = 'sum: ' + sum;
   }
   
 
