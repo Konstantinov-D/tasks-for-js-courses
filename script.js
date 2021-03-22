@@ -1,8 +1,6 @@
 
-  // Task 1
-  // Есть массив d1, кнопка b-1, input i-1. Напишите функцию f1, которая при нажатии читает i-1 и добавляем его в массив. После чего выводит массив в .out-1. Поскольку мы будем выводить массив d1 неоднократно, то давайте вывод массива сделаем отдельной функцией, showArr - она подготовлена. Изучите ее - это хороший способ оптимизировать код.
-  
-  //          d1 = [33,'best', 66, 'best'];
+  // Task 2
+  // Напишите функцию f2, которая применяет метод pop к массиву d1, а затем выводит его (showArr) в .out-2
           
 
 let out = document.querySelector('.out');
@@ -10,9 +8,9 @@ let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let d = [33,'best', 66, 'best'];
-  d.push(inp.value);
-  out.innerHTML = d;
+  let d = [33,'best', 66, 77, 'best'];
+  let res = d.pop();
+  out.innerHTML = res;
 }
   
 
