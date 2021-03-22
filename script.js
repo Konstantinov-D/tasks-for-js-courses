@@ -1,6 +1,6 @@
 
-  // Task 2
-  // Напишите функцию f2, которая применяет метод pop к массиву d1, а затем выводит его (showArr) в .out-2
+  // Task 3
+  // Напишите функцию f3, которая применяет метод shift к массиву d1, а затем выводит его (showArr) в .out-3
           
 
 let out = document.querySelector('.out');
@@ -9,7 +9,7 @@ let inp = document.querySelector('input');
 
 button.onclick = () => {
   let d = [33,'best', 66, 77, 'best'];
-  let res = d.pop();
+  let res = d.shift();
   out.innerHTML = res;
 }
   
