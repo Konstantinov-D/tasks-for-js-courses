@@ -1,6 +1,6 @@
 
-  // Task 3
-  // Напишите функцию f3, которая применяет метод shift к массиву d1, а затем выводит его (showArr) в .out-3
+// Task 4
+  // Напишите функцию f4, которая применяет метод push к массиву d1, данные для массива берите из i-4, а затем выводит его (showArr) в .out-4
           
 
 let out = document.querySelector('.out');
@@ -9,8 +9,8 @@ let inp = document.querySelector('input');
 
 button.onclick = () => {
   let d = [33,'best', 66, 77, 'best'];
-  let res = d.shift();
-  out.innerHTML = res;
+  d.push(inp.value);
+  out.innerHTML = d;
 }
   
 
