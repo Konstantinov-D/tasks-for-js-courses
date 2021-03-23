@@ -1,20 +1,16 @@
-// Task 12
-  // Напишите функцию f12, которая эмулирует работу метода indexOf - ищет введенное число в массиве d12 (перебором). Если числа нет - выводит -1, если есть - его позицию в массиве.
-  
-  // d12 = [6, 62, 60, 70, 1, 5]
+ // Task 14
+  // Напишите функцию, которая получает i-14, переводит в число, а потом заполняет массив d14 так, что количество элементов равно введенному числу, и каждый элемент равен 1. Т.е. пользователь ввел 5, массив будет [1,1,1,1,1]. Выведите массив в out-14.
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let d = [1,2,3,4,5,6,7,8,9];
-      let res = '';
-      for (let i = d.length; i > 0; i--){
-          res += i + ' ';
-          
+  let d = [];
+      for (let i = 0; i <= inp.value; i++){
+          d.push(inp.value);
       }
-      console.log(res);
+      out.innerHTML = d;
   }
   
     
