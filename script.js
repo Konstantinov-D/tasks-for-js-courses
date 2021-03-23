@@ -8,8 +8,8 @@ let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let d = [2,3,4,5,6,7];
-  out.innerHTML = d.indexOf(parseInt(inp.value));
+  let d = [2,3,4,5,4,7];
+  out.innerHTML = d.indexOf(4,3); // будет искать четверку после третьего индекса
 }
   
 
