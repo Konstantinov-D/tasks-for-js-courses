@@ -1,15 +1,17 @@
 
- // Task 5
-  // Напишите функцию f5, которая применяет метод unshift к массиву d1, данные для массива берите из i-5, а затем выводит его (showArr) в .out-5
+  // Task 10
+  // Напишите функцию f10, которая применяет к массиву d10 метод reverse и выводит полученный массив в out-10
+  
+  // d10 = [3,14,15,92,6];
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let d = [33,'best', 66, 77, 'best'];
-  d.unshift(inp.value);
-  console.log(d);
+  d = [3,14,15,92,6];
+  d.reverse();
+  out.innerHTML = d;
 }
   
 
