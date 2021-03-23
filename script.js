@@ -1,18 +1,18 @@
-
-  // Task 10
-  // Напишите функцию f10, которая применяет к массиву d10 метод reverse и выводит полученный массив в out-10
+// Task 11
+  // Напишите функцию, которая получает число из input i-11, переводит в число, и с помощью метода indexOf проверяет наличие в массиве d11. Функция выводит в out-11 -1 если такого числа нет в массиве, либо его индекс в массиве.
   
-  // d10 = [3,14,15,92,6];
+  // d11 = [2,3,4,5,6,7];
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  d = [3,14,15,92,6];
-  d.reverse();
-  out.innerHTML = d;
+  let d = [2,3,4,5,6,7];
+  out.innerHTML = d.indexOf(parseInt(inp.value));
 }
+  
+
   
 
 
