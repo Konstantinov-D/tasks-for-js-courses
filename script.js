@@ -1,17 +1,22 @@
- // Task 14
-  // Напишите функцию, которая получает i-14, переводит в число, а потом заполняет массив d14 так, что количество элементов равно введенному числу, и каждый элемент равен 1. Т.е. пользователь ввел 5, массив будет [1,1,1,1,1]. Выведите массив в out-14.
+// Task 15
+  // Напишите функцию f15, которая вначале проверяет, есть ли элемент из i-15 в массиве d15 (переводим в число), а потом - если нет - добавляет его в массив.
+  
+  
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let d = [];
-      for (let i = 0; i <= inp.value; i++){
-          d.push(inp.value);
-      }
-      out.innerHTML = d;
+  let d = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+  if(d.indexOf(+inp.value) != -1) {
+    out.innerHTML = 'Есть элемент в массиве';
   }
+  else {
+      d.push(+inp.value);
+      out.innerHTML = d;
+  }    
+}
   
     
 
