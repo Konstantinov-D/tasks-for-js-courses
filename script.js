@@ -1,6 +1,9 @@
-// Task 15
-  // Напишите функцию f15, которая вначале проверяет, есть ли элемент из i-15 в массиве d15 (переводим в число), а потом - если нет - добавляет его в массив.
+// Task 16
+  // Даны два массива d161 и d162 - используя метод concat - добавьте в массив d16 результат применения concat между массивом d161 и d162.
   
+  // let d16 = [];
+  // let d161 = [5,6,7,8,9];
+  // let d162 = [23,24,56,87];
   
 
 let out = document.querySelector('.out');
@@ -8,14 +11,11 @@ let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let d = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
-  if(d.indexOf(+inp.value) != -1) {
-    out.innerHTML = 'Есть элемент в массиве';
-  }
-  else {
-      d.push(+inp.value);
-      out.innerHTML = d;
-  }    
+  let d1 = [];
+  let d2 = [5,6,7,8,9];
+  let d3 = [23,24,56,87];
+   d1 = d2.concat(d3);
+   console.log(d1);
 }
   
     
