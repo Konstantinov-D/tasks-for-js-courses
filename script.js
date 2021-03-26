@@ -15,8 +15,11 @@ button.onclick = () => {
   let d1 = [];
   d2=['a', 'b', 'c', 'd'];
   d3=[1,2,3,4,5];
-   for (i = 0; i < d2.length;i++ ){
-     d1.push(d2[i],d3[i])
+   for (i = 0; i < d2.length;i++ ) {
+     d1.push(d2[i]);
+   }
+   for (i = 0; i < d3.length;i++ ) {
+    d1.push(d3[i]);
    }
    console.log(d1);
 }
