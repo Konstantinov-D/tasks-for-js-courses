@@ -7,15 +7,11 @@ let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
-  let max = '';
-  let d = [[1, 2, 3, 4,5,5,5,5, 5], [6, 7, 8], [9, 10, 11, 12, 13, 14]];
-  for (let i = 0; i < d.length; i++) {
-    if (d[i].length > max) {
-      max = d[i].length;
-    }
-    out.innerHTML = max;
-
-  }
+  
+  let d = [9, 10, 11, 12, 13, 14,15,16,17,18];
+  d.splice(2,3,'hi')
+  console.log(d);
+  
 }
 
 
