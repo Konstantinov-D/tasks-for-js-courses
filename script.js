@@ -1,17 +1,20 @@
-// Task 14
-// При нажатии b-14 выполняете функцию f14. Функция должна вывести в out-14 длины вложенных в a14 массивов. Через пробел.
+// Task 15
+// При нажатии b-15 выполняете функцию f15. Функция должна вывести в out-15 длину самого большого вложенного массива в a15.
+
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
 button.onclick = () => {
+  let max = '';
+  let d = [[1, 2, 3, 4,5,5,5,5, 5], [6, 7, 8], [9, 10, 11, 12, 13, 14]];
+  for (let i = 0; i < d.length; i++) {
+    if (d[i].length > max) {
+      max = d[i].length;
+    }
+    out.innerHTML = max;
 
-  let d = [[1,2,3,4,5],[6,7,8],[9,10,11,12,13,14]];
-  for(let i =0;i<d.length;i++){
-
-      out.innerHTML += d[i].length + ' ';
-  
   }
 }
 
