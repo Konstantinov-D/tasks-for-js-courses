@@ -1,11 +1,10 @@
-// Task 6
-// Добавьте input .i-61 и i-62. При нажатии b-6 выполняете функцию f6. Функция должна получать из i-61 ключ, а из i-62 значение и добавлять его в массив a6. После этого, с помощью функции f5 выводите массив a6 в out-6.
+// Task 7
+// Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 ключ. Если такой ключ есть в a7 то выводить 1 в out-7, если нет - 0.
 
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
-let inp1 = document.querySelector('.i-1');
-let inp2 = document.querySelector('.i-2');
+let inp = document.querySelector('.i-1');
 
 let a2 = {
   "one" : "hello",
@@ -14,10 +13,15 @@ let a2 = {
   };
 
 button.onclick = () => {
-  a2[inp1.value] = inp2.value;
-  console.log(a2);
+  for (let key in a2) {
+    if (inp.value == key){
+      out.innerHTML = 'есть';
+      break;
+    }else {
+      out.innerHTML = 'нет';
+    }
 }
-
+}
 
 
 // Task 1
