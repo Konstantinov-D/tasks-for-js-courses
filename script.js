@@ -1,28 +1,28 @@
-// Task 4
-// Давайте напишем функцию f4, которая будет выводить массив a4 в out-4 при нажатии кнопки b-4. Формат вывода - ключ пробел значение перенос строки +'' <br>'. Функция должна возвращать строку в указанном формате вывода.
-
-// Обратите внимание на пробел перед br!!!!!!!!
+// Task 5
+// Функция f4 жестко привязана к массиву a4. Это не удобно. Давайте напишем функцию f5, которая принимает массив как параметр и выводит его в формате указанном в функции в указанный блок (как второй параметр).
 
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
 let inp = document.querySelector('input');
 
-button.onclick = () => {
+let a2 = {
+  "one" : "hello",
+  "two" : "mahai",
+  "five" : "hi"
+  };
+let a3 = {
+  "one" : "hello00",
+  "two" : "mahai00",
+  "five" : "hi000"
+  };
+function mass(a,b) {
   
-  let a2 = {
-    "one" : "hello",
-    "two" : "mahai",
-    "five" : "hi"
-    };
-    console.log(a2);
-    let lol = '';
-    for(let key in a2){
-      lol += key + ' ' + a2[key] + ' ';
-      out.innerHTML = lol;
-    }
-  
+  console.log(a);
+  console.log(b);
 }
+mass(a3,a2);
+
 
 
 // Task 1
