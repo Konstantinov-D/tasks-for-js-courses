@@ -1,11 +1,7 @@
-// Task 1
-// При нажатии b-1 выполняете функцию f1. Функция должна вывести в out-1 значение сохраненное под ключем two из массива a1. Возвратите это значение.
+// Task 4
+// Давайте напишем функцию f4, которая будет выводить массив a4 в out-4 при нажатии кнопки b-4. Формат вывода - ключ пробел значение перенос строки +'' <br>'. Функция должна возвращать строку в указанном формате вывода.
 
-// let a1 = {
-// "one" : 15,
-// "two" : 16,
-// "five" : 20
-// };
+// Обратите внимание на пробел перед br!!!!!!!!
 
 
 let out = document.querySelector('.out');
@@ -14,12 +10,17 @@ let inp = document.querySelector('input');
 
 button.onclick = () => {
   
-  let a = {
-    "one" : 15,
-    "two" : 16,
-    "five" : 20
+  let a2 = {
+    "one" : "hello",
+    "two" : "mahai",
+    "five" : "hi"
     };
-    out.innerHTML = a.two;
+    console.log(a2);
+    let lol = '';
+    for(let key in a2){
+      lol += key + ' ' + a2[key] + ' ';
+      out.innerHTML = lol;
+    }
   
 }
 
