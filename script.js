@@ -1,5 +1,5 @@
-// Task 7
-// Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 ключ. Если такой ключ есть в a7 то выводить 1 в out-7, если нет - 0.
+// Task 9
+// Добавьте input .i-9. При нажатии b-9 выполняете функцию f9. Функция должна вывести в out-9 все ключи массива a9, которые содержат значение, равное значению в input.i-9. Вывод через пробел. Если значений - нет то выводить пустую строку.
 
 
 let out = document.querySelector('.out');
@@ -7,16 +7,19 @@ let button = document.querySelector('button');
 let inp = document.querySelector('.i-1');
 
 let a2 = {
-  "one" : "hello",
-  "two" : "mahai",
-  "five" : "hi"
+  "one" : "11",
+  "two" : "22",
+  "five" : "33",
+  "six" : "33",
+  "seven" : "33"
   };
 
 button.onclick = () => {
+  let res = '';
   for (let key in a2) {
-    if (inp.value == key){
-      out.innerHTML = 'есть';
-      break;
+    if (inp.value == a2[key]){
+      res += key + ' ';
+      out.innerHTML = res;
     }else {
       out.innerHTML = 'нет';
     }
