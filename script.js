@@ -1,27 +1,22 @@
-// Task 5
-// Функция f4 жестко привязана к массиву a4. Это не удобно. Давайте напишем функцию f5, которая принимает массив как параметр и выводит его в формате указанном в функции в указанный блок (как второй параметр).
+// Task 6
+// Добавьте input .i-61 и i-62. При нажатии b-6 выполняете функцию f6. Функция должна получать из i-61 ключ, а из i-62 значение и добавлять его в массив a6. После этого, с помощью функции f5 выводите массив a6 в out-6.
 
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
-let inp = document.querySelector('input');
+let inp1 = document.querySelector('.i-1');
+let inp2 = document.querySelector('.i-2');
 
 let a2 = {
   "one" : "hello",
   "two" : "mahai",
   "five" : "hi"
   };
-let a3 = {
-  "one" : "hello00",
-  "two" : "mahai00",
-  "five" : "hi000"
-  };
-function mass(a,b) {
-  
-  console.log(a);
-  console.log(b);
+
+button.onclick = () => {
+  a2[inp1.value] = inp2.value;
+  console.log(a2);
 }
-mass(a3,a2);
 
 
 
