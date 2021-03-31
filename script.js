@@ -1,29 +1,29 @@
-// Task 10
-// Давайте напишем полезную функцию f10, которая проверяет есть ли значение в ассоциативном массиве. Фукнция должна возвращать true если есть, и false если нет. Массив и значение передавать функции в качестве параметров.
+// Task 11
+// При нажатии b-11 выполняете функцию f11. Функция должна получить ключ из i-11 и удалить запись из массива a11 с таким ключем. После этого вывести массив в out-11. Для вывода используйте функцию f5.
 
 
 let out = document.querySelector('.out');
 let button = document.querySelector('button');
-// let inp = document.querySelector('.i-1');
+let inp = document.querySelector('.i-1');
 
 let a2 = {
   "one" : "11",
   "two" : "22",
-  "five" : "33",
-  "six" : "33",
-  "seven" : "33"
+  "three" : "33",
+  "four" : "44",
+  "five" : "55"
   };
-let object = {"gi" : "tree"};
 
-  function isEmpty(obj) {
-    for (let key in obj) {
-      return false;
+
+button.onclick = () => {
+  for (let key in a2) {
+    if (inp.value == key) {
+      delete a2[key];
     }
-    return true;
   }
-  
-  console.log( isEmpty(object) );
-  
+  console.log(a2);
+}
+
   
 
 
