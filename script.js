@@ -1,16 +1,18 @@
-// Task 4
-// При нажатии b-4 выполняете функцию f4. Функция должна проверить наличие в наборе s4 строки введенной пользователем в i-4. Если строка есть - то вывести в out-4 true. Если нет - false.
+// Task 5
+// При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 количество элементов в наборе s5.
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
 
 btn.onclick = () => {
+
     let a = new Set();
     a.add('b');
     a.add('o');
     a.add('h');
     a.add('c');
-    console.log(a.has(inp.value));
+    for (let item of a)
+    console.log(a.size);
 }
 
 
