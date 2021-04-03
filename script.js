@@ -1,25 +1,24 @@
-// Task 8
-// При нажатии b-8 выполняете функцию f8. Функция должна перебрать набор s8 и добавить в массив ar8 только числа больше 5. Выведите массив в консоль.
+// Task 9
+// При нажатии b-9 выполняете функцию f9. Функция должна принимать набор set в качестве параметра, преобразовывать его в массив и возвращать в виде строки. При преобразовании массива в строку между элементами должен быть пробел.
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
 
-btn.onclick = () => {
-    let arr = [];
-    let a = new Set();
-    a.add(11);
-    a.add(2);
-    a.add(33);
-    a.add(5);
-    a.add(1);
-    for (let item of a) {
-        if (item >= 5) {
-            arr.push(item)
-        }
 
+let b = new Set();
+b.add(1);
+b.add(2);
+b.add(3);
+b.add(4);
+function addset(set) {
+    let setArr = Array.from(set);
+    let res = '';
+    for (let item in setArr) {
+        res += item + ' ';
     }
-    console.log(arr);
+    console.log(res);
 }
+addset(b);
 
 
 
