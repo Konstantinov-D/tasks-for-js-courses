@@ -1,5 +1,5 @@
-// Task 5
-// При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 количество элементов в наборе s5.
+// Task 7
+// При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 значение пароля и проверять, чтобы пользователь в строке пароля использовал не повторяющиеся символы. Если символы уникальны, а длина пароля больше ( строго) 6 то выводите в out-7 число 1. Если есть повторяющиеся символы, или длина меньше или равна 6 - то выводите 0. Для проверки уникальности символов используйте Set.
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
@@ -7,12 +7,21 @@ let inp = document.querySelector('input');
 btn.onclick = () => {
 
     let a = new Set();
-    a.add('b');
-    a.add('o');
-    a.add('h');
-    a.add('c');
-    for (let item of a)
-    console.log(a.size);
+    let arr = inp.value.split('');
+
+    if (arr.length > 6) {
+        for (let item of arr) {
+            a.add(item);
+        }
+        if (arr.length == a.size) {
+            console.log('все символы уникальны');
+        } else {
+            console.log('у вас повтор символов');
+        }
+
+    } else {
+        console.log('меньше 6 уникальных');
+    }
 }
 
 
