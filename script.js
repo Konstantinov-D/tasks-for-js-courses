@@ -1,24 +1,17 @@
-// Task 9
-// При нажатии b-9 выполняете функцию f9. Функция должна принимать набор set в качестве параметра, преобразовывать его в массив и возвращать в виде строки. При преобразовании массива в строку между элементами должен быть пробел.
+// Task 11
+// При нажатии b-11 выполняете функцию f11. Функция должна преобразовать массив a11 в набор. И выводить в консоль. Изучите вывод получившегося набора. Разберитесь почему так происходит.
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
 
+let c = [1,2,3,4,5,6,6];
+let v = [1,22,33,4,4,5,6,6];
 
-let b = new Set();
-b.add(1);
-b.add(2);
-b.add(3);
-b.add(4);
-function addset(set) {
-    let setArr = Array.from(set);
-    let res = '';
-    for (let item in setArr) {
-        res += item + ' ';
-    }
+function arrToSet(arr) {
+    let res = new Set(arr);
     console.log(res);
 }
-addset(b);
+arrToSet(v);
 
 
 
