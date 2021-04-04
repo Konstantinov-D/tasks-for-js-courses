@@ -1,17 +1,18 @@
-// Task 11
-// При нажатии b-11 выполняете функцию f11. Функция должна преобразовать массив a11 в набор. И выводить в консоль. Изучите вывод получившегося набора. Разберитесь почему так происходит.
+// Task 12
+// При нажатии b-12 выполняете функцию f12. Функция должна преобразовать строку str12 в массив, так, что каждая буква - отдельный элемент массива. Потом создать набор на основе массива и возвратить его.
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
 
-let c = [1,2,3,4,5,6,6];
-let v = [1,22,33,4,4,5,6,6];
+let c = 'stringg';
 
-function arrToSet(arr) {
+
+function arrToSet(str) {
+    let arr = str.split('');
     let res = new Set(arr);
     console.log(res);
 }
-arrToSet(v);
+arrToSet(c);
 
 
 
