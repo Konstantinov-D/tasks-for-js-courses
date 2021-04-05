@@ -1,16 +1,34 @@
-// Task 12
-// При нажатии b-12 выполняете функцию f12. Функция должна преобразовать строку str12 в массив, так, что каждая буква - отдельный элемент массива. Потом создать набор на основе массива и возвратить его.
+// Task 13
+// При нажатии b-13 выполняете функцию f13. Функция должна преобразовать строку str13 в массив, причем каждая буква - отдельный элемент массива. Потом создать набор на основе массива. Затем, перебирая набор поэлементам, найти сколько раз каждый символ встречается в исходном массиве. Результат - в виде объекта типа { символ : количество, символ : количество } вывести в консоль и возвратить.
+
+// Пример результата для строки 'Hello ho'
+
+// { "H" : 1, 'e' : 1, 'l' : 2, "o" : 2, " ": 1}
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
 
-let c = 'stringg';
+let c = 'hello World';
 
+function countLetter(str, massiv) {
+    let count = 0;
+    for (i = 0; i < massiv.length; i++) {
+        if (str == massiv[i]) {
+            count++;
+        }
+    }
+    return count;
+}
 
 function arrToSet(str) {
     let arr = str.split('');
     let res = new Set(arr);
-    console.log(res);
+    let result = {};
+    for (let item of res) {
+        result[item]= countLetter(item, arr);
+    }
+    console.log(result);
+    return result;
 }
 arrToSet(c);
 
