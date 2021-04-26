@@ -1,20 +1,24 @@
-// Task 6
-// При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 в одномерный. Результат вывести в out-6 через пробел.
+// Task 7
+// При нажатии .b-7 выполняете функцию f7. Функция должна переиндексировать массив a7. Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. Вам необходимо сделать из a7 объект, где ключи - значения id из вложенных массивов, а значения - имя (т.е { 23 : Ivan, 45 : Petr}. Функция должна возвращать результирующий массив.
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 // let out = document.querySelectorAll('.out');
 
+let a7 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
+
+function f7(arr) {
+  let result = {};
+  for (let i = 0; i < arr.length; i++) {
+    let c = arr[i];
+    result[c.id] = c.name;
+  }
+  console.log(result);
+  //{23:'ivan'}
+}
 
 btn.onclick = () => {
-
-  var arr = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
-var result = [].concat(arr[0],arr[1],arr[2] );
-console.log(result);
+  f7(a7);
 };
 
 
