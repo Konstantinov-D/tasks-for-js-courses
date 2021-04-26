@@ -1,18 +1,18 @@
-// Task 3
-// При нажатии .b-3 выполняете функцию f3. Функция получает div.out-3 со страницы с помощью getElementsByClassName и в каждый записывает число 3, перезаписывая содержимое div.
+// Task 4
+// При нажатии .b-4 выполняете функцию f4. Функция получает div.out-4 со страницы с помощью querySelectorAll и в каждый дописывает число 4.
 
 let btn = document.querySelector('button');
 let inp = document.querySelector('input');
-let out = document.getElementsByClassName('out');
+let out = document.querySelectorAll('.out');
 
 // let a = [1, 'hi', 3, 4, 'lol', 6];
 
 btn.onclick = () => {
     
   for (let item of out) {
-    item.innerHTML = '3';
+    item.innerHTML = '4';
   }
-  
+
   };
 
 
