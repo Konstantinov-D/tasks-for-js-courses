@@ -1,19 +1,21 @@
-// Task 4
-// При нажатии .b-4 выполняете функцию f4. Функция получает div.out-4 со страницы с помощью querySelectorAll и в каждый дописывает число 4.
+// Task 5
+// При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of перебрать массив a5 и возвратить новый массив куда входят элементы из a5 большие 7.
 
 let btn = document.querySelector('button');
-let inp = document.querySelector('input');
-let out = document.querySelectorAll('.out');
+// let inp = document.querySelector('input');
+// let out = document.querySelectorAll('.out');
 
-// let a = [1, 'hi', 3, 4, 'lol', 6];
-
+let a = [1, 'hi', 30, 4, 'lol', 16];
+let newA = [];
 btn.onclick = () => {
-    
-  for (let item of out) {
-    item.innerHTML = '4';
-  }
 
-  };
+  for (let item of a) {
+    if (item > 7) {
+      newA.push(item);
+    }
+  }
+  console.log(newA);
+};
 
 
 
