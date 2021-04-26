@@ -1,20 +1,20 @@
-// Task 5
-// При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of перебрать массив a5 и возвратить новый массив куда входят элементы из a5 большие 7.
+// Task 6
+// При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 в одномерный. Результат вывести в out-6 через пробел.
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 // let out = document.querySelectorAll('.out');
 
-let a = [1, 'hi', 30, 4, 'lol', 16];
-let newA = [];
+
 btn.onclick = () => {
 
-  for (let item of a) {
-    if (item > 7) {
-      newA.push(item);
-    }
-  }
-  console.log(newA);
+  var arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+var result = [].concat(arr[0],arr[1],arr[2] );
+console.log(result);
 };
 
 
