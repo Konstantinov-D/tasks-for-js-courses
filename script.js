@@ -1,19 +1,26 @@
-// Task 8
-// При нажатии .b-8 выполняете функцию f8. Функция должна переиндексировать массив a8. Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. Вам необходимо сделать из a8 массив, который будет содержать только числовые id. Т.е. [23, 45]. Функция должна возвращать результирующий массив.
+// Task 9
+// При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в out-9 самый большой индекс из вложенных в a9 массивов. В данном случае это 4. Т.е. самый большой вложенный массив это [0,0,0,0,0], а в нем самый большой индекс 4.
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
-// let out = document.querySelectorAll('.out');
-
-let a7 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
+let out = document.querySelector('.out');
+let a7 = [
+  [0, 0, 0, 0],
+  [1, 1, 1],
+  [0, 0, 0, 4, 5, 0, 0, 6],
+  [0, 0, 0, 0, 9, 0]
+];
 
 function f7(arr) {
-  let result = [];
+  let maxIndx = 0;
   for (let i = 0; i < arr.length; i++) {
-    let c = arr[i];
-    result.push(c.id);
+    for (let k = 0; k < arr[i].length; k++) {
+      if (k > maxIndx) {
+        maxIndx = k;
+      }
+    }
   }
-  console.log(result);
+  out.innerHTML = maxIndx;
 }
 
 btn.onclick = () => {
