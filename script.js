@@ -1,23 +1,17 @@
-// Task 11
-// При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения, которые больше 10. Вывод - через пробел.
+// Task 12
+// При нажатии .b-12 выполняете функцию f12. Функция должна c помощью for of перебрать a12 и вывести в out-12 через пробел.
 
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 let out = document.querySelector('.out');
-let a7 = {
-  name: "John",
-  age: 40,
-  mold: 50,
-  gold: 5,
-  "likes birds": 800 
-};
+let a7 = [10, 20, 30, 40, 60, 70];
 
 function f7(arr) {
   res = '';
-  for (let key in arr) {
-    if (arr[key] > 10) {
-      res += arr[key] + ' ';
+  for (let item of arr) {
+    if (item > 10) {
+      res += item + ' ';
     }
   }
   console.log(res);
