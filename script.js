@@ -1,26 +1,14 @@
-// Task 9
-// При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в out-9 самый большой индекс из вложенных в a9 массивов. В данном случае это 4. Т.е. самый большой вложенный массив это [0,0,0,0,0], а в нем самый большой индекс 4.
+// Task 10
+// При нажатии .b-10 выполняете функцию f10. Функция должна преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный массив.
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 let out = document.querySelector('.out');
-let a7 = [
-  [0, 0, 0, 0],
-  [1, 1, 1],
-  [0, 0, 0, 4, 5, 0, 0, 6],
-  [0, 0, 0, 0, 9, 0]
-];
+let a7 = [0, 0, 0, 4, 5, 'hello', 0, 6];
 
 function f7(arr) {
-  let maxIndx = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let k = 0; k < arr[i].length; k++) {
-      if (k > maxIndx) {
-        maxIndx = k;
-      }
-    }
-  }
-  out.innerHTML = maxIndx;
+  let res = new Set(arr)
+  console.log(res);
 }
 
 btn.onclick = () => {
