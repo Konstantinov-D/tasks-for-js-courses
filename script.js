@@ -1,13 +1,25 @@
-// Task 10
-// При нажатии .b-10 выполняете функцию f10. Функция должна преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный массив.
+// Task 11
+// При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения, которые больше 10. Вывод - через пробел.
+
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 let out = document.querySelector('.out');
-let a7 = [0, 0, 0, 4, 5, 'hello', 0, 6];
+let a7 = {
+  name: "John",
+  age: 40,
+  mold: 50,
+  gold: 5,
+  "likes birds": 800 
+};
 
 function f7(arr) {
-  let res = new Set(arr)
+  res = '';
+  for (let key in arr) {
+    if (arr[key] > 10) {
+      res += arr[key] + ' ';
+    }
+  }
   console.log(res);
 }
 
