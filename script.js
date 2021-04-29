@@ -1,21 +1,16 @@
-// Дан массив a6 = [3, 14, 15, 92, "6", "5", "hello", 32]. C помощью filter переберите массив a6 и создайте
-//     массив a6_res,
-//     который содержит только числа из a6, которые больше 14. Возвратите a6_res. Действия должны запускаться
-//     при вызове
-//     функции t6
+// Дан массив a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles']. C
+//     помощью map
+//     переберите массив a7 и создайте a7_res, который содержит элементы массива a7 приведенные к нижнему
+//     регистру. Действия
+//     должны запускаться при вызове функции t7. Функция должна возвращать a7_res.
 
 
 let btn = document.querySelector('button');
-// let inp = document.querySelector('input');
 let out = document.querySelector('.out');
 
-let a = [3, 14, 15, 92, "6", "5", "hello", 32];
+let a = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
 
-let c = a.filter(item => {
-  if (typeof item === 'number' && item > 14) {
-    return true;
-  }
-})
+let c = a.map(item => item.toLowerCase())
 console.log(c);
 
 
