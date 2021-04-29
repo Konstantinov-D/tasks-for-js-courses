@@ -1,25 +1,20 @@
-// Дан массив a2= [2,3,4,5,10,11,12] - с помощью map переберите массив и создайте массив a2_res куда
-// //     добавьте элементы
-// //     данного массива возведенные во вторую степень. Возвратите массив a2_res. Действия должны запускаться при
-// //     вызове функции
+// Дан массив a3 = [4,"3",6,7,"12",34,"56",78,90,11] - с помощью map переберите массив и создайте массив
+//     a3_res куда
+//     добавьте все элементы преобразованные к числу. Возвратите a3_res.
 
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 let out = document.querySelector('.out');
 
-let a = [2, 3, 4, 5, 10, 11, 12];
-
-let c = a.map(function mapper(item) {
-  return Math.pow(item, 2)
+let a = [4, "3", 3, 7, "12", 34, "56", 78, 90, 11];
+let c = [];
+a.map(item => {
+  if (typeof item === 'number') {
+    c.push(item)
+  }
 });
 console.log(c);
-
-
-
-
-
-
 
 
 
