@@ -1,16 +1,19 @@
-// Дан массив a7 = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles']. C
-//     помощью map
-//     переберите массив a7 и создайте a7_res, который содержит элементы массива a7 приведенные к нижнему
-//     регистру. Действия
-//     должны запускаться при вызове функции t7. Функция должна возвращать a7_res.
+// Дан массив a8 = [3, 14, 15, 92, 7, 32, 59]. C помощью цикла или метода - решить самостоятельно,
+//     переберите массив a8 и
+//     добавьте в a8_res индексы четных элементов. Т.е. для данного примера по результату работы функции в
+//     a8_res должны быть
+//     [1, 3, 5]. Функция должна возвращать a8_res.
 
 
 let btn = document.querySelector('button');
 let out = document.querySelector('.out');
 
-let a = ['Alto`s Adventure', 'Angry Birds 2', 'Anno 2205', 'Assassin`s Creed Chronicles'];
+let a = [3, 14, 15, 92, 7, 32, 59];
 
-let c = a.map(item => item.toLowerCase())
+let c = [];
+a.map(item => {if (item % 2 === 0) {
+  c.push(a.indexOf(item))
+}})
 console.log(c);
 
 
