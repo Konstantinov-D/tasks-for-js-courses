@@ -1,20 +1,18 @@
-// Дан массив a8 = [3, 14, 15, 92, 7, 32, 59]. C помощью цикла или метода - решить самостоятельно,
-//     переберите массив a8 и
-//     добавьте в a8_res индексы четных элементов. Т.е. для данного примера по результату работы функции в
-//     a8_res должны быть
-//     [1, 3, 5]. Функция должна возвращать a8_res.
+// Дан массив a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal']. С
+//     помощью forEach,
+//     переберите массив a9 и преобразуйте все записи в массиве в нижний регистр. Действия должны запускаться
+//     при вызове
+//     функции t9. Функция должна возвращать a9.
 
 
 let btn = document.querySelector('button');
 let out = document.querySelector('.out');
 
-let a = [3, 14, 15, 92, 7, 32, 59];
+let a = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal'];
+let copy = [];
+a.forEach(item => copy.push(item.toLowerCase()))
 
-let c = [];
-a.map(item => {if (item % 2 === 0) {
-  c.push(a.indexOf(item))
-}})
-console.log(c);
+console.log(copy);
 
 
 
