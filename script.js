@@ -1,20 +1,21 @@
-// Функция t4 должна с помощью filter отфильтровать массив t4 и создать новый массив a4_res, куда добавить
-//     только числа из
-//     массива t4. Функция должна возвращать a4_res.
+//Дан массив a5 = [3, 14, 15, 92]. C помощью filter переберите массив и создайте a5_res, который содержит
+//     только четные
+//     числа из a5. Возвратите a5_res. Действия должны запускаться при вызове функции t5. Проверьте, чтобы
+//     функция корректно
+//     работала со строками, т.е. '6' не должно попасть в результирующий массив.
 
 
 let btn = document.querySelector('button');
 // let inp = document.querySelector('input');
 let out = document.querySelector('.out');
 
-let a = [4, "3", 3, 7, "12", 34, "56", 78, 90, 11];
-let c = [];
-a.filter(item => {
-  if (typeof item === 'number') {
-    c.push(item)
+let a = [3, 14, 15, 92,'6'];
+
+let c = a.filter(item => {
+  if (typeof item === 'number' && item % 2 === 0){
+    return true;
   }
-}
-);
+})
 console.log(c);
 
 
