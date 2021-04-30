@@ -1,21 +1,16 @@
-// Дан массив a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью forEach, переберите массив a10 и элементы,
-//     которые меньше
-//     нуля замените на 0. Возвратите a10. Действия должны запускаться при вызове функции t10. Для данного
-//     примера результат
-//     должен выглядеть так: [2, 13, 14, 0, 9, 5, 0, 0, 14].
+// Дан массив a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью filter, переберите массив a11 и создайте
+//     новый массив
+//     a11_res куда добавьте только те элементы массива ИНДЕКС которых - четный. Возвратите a11_res.
 
 
 let btn = document.querySelector('button');
 let out = document.querySelector('.out');
 
 let a = [2, 13, 14, -7, 9, 5, 0, -2, 14];
-let indx = [];
-a.forEach((item,index) => {if (item < 0) indx.push(index)})
-indx.forEach(index => a[index] = 0)
-console.log(a);
-console.log(indx);
+let res = [];
 
-
+a.filter((item, index) => { if (index % 2 == 0) res.push(item) })
+console.log(res)
 
 
 
