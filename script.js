@@ -1,18 +1,19 @@
-// Дан массив a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal']. С
-//     помощью forEach,
-//     переберите массив a9 и преобразуйте все записи в массиве в нижний регистр. Действия должны запускаться
-//     при вызове
-//     функции t9. Функция должна возвращать a9.
+// Дан массив a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью forEach, переберите массив a10 и элементы,
+//     которые меньше
+//     нуля замените на 0. Возвратите a10. Действия должны запускаться при вызове функции t10. Для данного
+//     примера результат
+//     должен выглядеть так: [2, 13, 14, 0, 9, 5, 0, 0, 14].
 
 
 let btn = document.querySelector('button');
 let out = document.querySelector('.out');
 
-let a = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal'];
-let copy = [];
-a.forEach(item => copy.push(item.toLowerCase()))
-
-console.log(copy);
+let a = [2, 13, 14, -7, 9, 5, 0, -2, 14];
+let indx = [];
+a.forEach((item,index) => {if (item < 0) indx.push(index)})
+indx.forEach(index => a[index] = 0)
+console.log(a);
+console.log(indx);
 
 
 
