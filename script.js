@@ -1,6 +1,6 @@
-// Данa переменная a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью метода Array.isArray определите
-//     является ли переменная
-//     a12 массивом. Если да - то функция возврaщает true, если нет false.
+// Дан массив a13 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью метода includes функция t13 должна
+//     определить, есть ли
+//     значение из переменной a13_num в массиве. Если да - то функция возврaщает true, если нет false.
 
 
 let btn = document.querySelector('button');
@@ -8,8 +8,12 @@ let out = document.querySelector('.out');
 
 let a = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
-let b = Array.isArray(a)
+let b = a.includes(2)
 console.log(b)
+
+
+
+
 
 // <section>
 // <p><b>Task 01</b></p>
