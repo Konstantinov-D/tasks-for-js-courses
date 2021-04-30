@@ -1,22 +1,15 @@
-// Дан массив a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью filter, переберите массив a11 и создайте
-//     новый массив
-//     a11_res куда добавьте только те элементы массива ИНДЕКС которых - четный. Возвратите a11_res.
+// Данa переменная a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью метода Array.isArray определите
+//     является ли переменная
+//     a12 массивом. Если да - то функция возврaщает true, если нет false.
 
 
 let btn = document.querySelector('button');
 let out = document.querySelector('.out');
 
 let a = [2, 13, 14, -7, 9, 5, 0, -2, 14];
-let res = [];
 
-a.filter((item, index) => { if (index % 2 == 0) res.push(item) })
-console.log(res)
-
-
-
-
-
-
+let b = Array.isArray(a)
+console.log(b)
 
 // <section>
 // <p><b>Task 01</b></p>
