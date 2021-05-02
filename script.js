@@ -1,18 +1,17 @@
-// Дан массив a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'] - с помощью forEach переберите массив и
-//     создайте новый массив a3_res куда добавьте элементы данного массива являющиеся числом. Запускаться
-//     решение должно при вызове функции t3
+// На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и
+//     добавьте атрибуты в массив a4_res Запускаться решение должно при вызове функции t4.
 
 
 
 
-let a = [2, 'hello', 3, 'hi', 4, 'Mazai'];
 let res = [];
-function result(mas) {
-    mas.forEach(item => {if ( typeof item === 'number') res.push(item)})
-    console.log(res);
+function data(){
+   let spans = document.querySelectorAll('span');
+   spans.forEach(item => res.push(item.getAttribute('data')))
+   console.log(res);
 }
 
-result(a);
+data();
 
 
 
