@@ -1,17 +1,11 @@
-// На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и
-//     добавьте атрибуты в массив a4_res Запускаться решение должно при вызове функции t4.
+// Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. выведите на
+//     страницу. Запускаться решение должно при вызове функции t6.
 
 
 
-
-let res = [];
-function data(){
-   let spans = document.querySelectorAll('span');
-   spans.forEach(item => res.push(item.getAttribute('data')))
-   console.log(res);
-}
-
-data();
+let str='helloworld, hi, ho';
+let res = str.split(',');
+console.log(res);
 
 
 
