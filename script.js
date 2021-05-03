@@ -1,15 +1,17 @@
-//  Task 3.</b></p>
-/* <p>Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px.
-Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
+//  Task 4.</b></p>
+//<p>Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4.
+//Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в
+//out-4.*/
 
-let w = 200;
+
+let divv = document.querySelector('.div-1');
+
 function t() {
 
-    document.querySelector('.div-1').style.width = w + 'px';
-    w += 5;
+    document.querySelector('.out').innerHTML = divv.innerHTML;
 
 }
-document.querySelector('.div-1').onclick = function () {
+document.querySelector('.div-1').ondblclick = function () {
     t();
 }
 
