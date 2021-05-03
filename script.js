@@ -1,122 +1,263 @@
-// Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в GET строку
-//     (GET параметры). Найдите описание что такое GET строка самостоятельно. Разделитель - амперсанд.
-//     Результат присвойте a10_res. Запускаться решение должно при вызове функции t10. Допускается лишний
-//     амперсанд в конце строки!!! 
+ // Task 1.</b></p>
+// <p>Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и выводить
+// на экран содержимое блока (только текст). Вывод осуществляется в out-1.
+
+
+let div1 = document.querySelector('.div-1');
+let out = document.querySelector('.out');
+
+div1.onclick = () => {
+    out.innerHTML = div1.innerHTML;
+    return div1;
+}
 
 
 
-let a = {name: 'ivan', age: 15, sex: 1, id: 45}
-let res = '';
-    for (let key in a) {
-      res += key + '=' + a[key] + '&' ;
-    }
-console.log(res);
 
 
 
 
 
-// //  <h1>Unit 18. Join, Split, ForEach</h1>
+{/* <h1>Unit 19. События мыши</h1>
 
-// <section>
-// <p><b>Task 01.</b> Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите массив и
-//     создайте новый массив a1_res куда добавьте элементы данного массива умноженные на 2. Действия должны
-//     запускаться при вызове функции t1.</p>
-// <button class="b-1 button-primary">task 1</button>
-// <div class="out-1">
-// </div>
-// </section>
+<section>
+    <p><b>Task 1.</b></p>
+    <p>Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и выводить
+        на экран содержимое блока (только текст). Вывод осуществляется в out-1. </p>
+    <div class="block div-1">task-1</div>
+    <div class="out-1">
+    </div>
+</section>
 
-// <section>
-// <p><b>Task 02.</b> Дан массив a1 = [2,3,4,5,10,11,12] - с помощью forEach переберите массив и
-//     создайте новый массив a2_res куда добавьте элементы данного массива деленные на 2. Действия должны
-//     запускаться при вызове функции t2.</p>
-// <button class="b-2 button-primary">task 2</button>
-// <div class="out-2">
-// </div>
-// </section>
+<section>
+    <p><b>Task 2.</b></p>
+    <p>Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна
+        возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также,
+        выводите на экран результат. Вывод осуществляется в out-2.</p>
+    <div class="block div-2">task-2</div>
+    <div class="out-2">
+    </div>
+</section>
 
-// <section>
-// <p><b>Task 03.</b> Дан массив a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'] - с помощью forEach переберите массив и
-//     создайте новый массив a3_res куда добавьте элементы данного массива являющиеся числом. Запускаться
-//     решение должно при вызове функции t3.</p>
-// <button class="b-3 button-primary">task 3</button>
-// <div class="out-3">
-// </div>
-// </section>
+<section>
+    <p><b>Task 3.</b></p>
+    <p>Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px.
+        Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. </p>
+    <div class="block div-3">task-3</div>
+    <div class="out-3">
+    </div>
+</section>
 
-// <section>
-// <p><b>Task 04.</b> На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и
-//     добавьте атрибуты в массив a4_res Запускаться решение должно при вызове функции t4.</p>
-// <button class="b-4 button-primary">task 4</button>
-// <div>
-//     <span class="task-4" data="1">One span with data</span>
-//     <span class="task-4" data="34">Two span with data</span>
-//     <span class="task-4" data="66">Thre span with data</span>
-// </div>
-// <div class="out-4">
-// </div>
-// </section>
+<section>
+    <p><b>Task 4.</b></p>
+    <p>Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4.
+        Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в
+        out-4. </p>
+    <div class="block div-4">task-4</div>
+    <div class="out-4">
+    </div>
+</section>
 
-// <section>
-// <p><b>Task 05.</b> На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите их и
-//     добавьте событие клик. Напишите функцию t5, которая будет запускаться при клике и добавлять атрибут data
-//     элемента, по которому кликнули в массив a5_res.</p>
-// <div class="divTask_5">
-//     <p class="task-5" data="1">One p with data</p>
-//     <p class="task-5" data="34">Two p with data</p>
-//     <p class="task-5" data="66">Thre p with data</p>
-// </div>
-// <div class="out-5">
-// </div>
-// </section>
+<section>
+    <p><b>Task 5.</b></p>
+    <p>Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс
+        active если он есть и добавляется если такого класса нет. </p>
+    <div class="block div-5 active">task-5</div>
+    <div class="out-5">
+    </div>
+</section>
 
-// <section>
-// <p><b>Task 06.</b>Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. выведите на
-//     страницу. Запускаться решение должно при вызове функции t6.</p>
-// <div>
+<section>
+    <p><b>Task 6.</b></p>
+    <p> Дан блок .div-6 и список .ul-6. При двойном клике на блоке скрывайте .ul-6 если он
+        показан и
+        показывайте если скрыт. Скрытие и показ делайте через добавление - удаление класса .hide </p>
+    <div>
 
-//     <button class="b-6 button-primary">task 6</button>
-//     <div class="out-6">
-//     </div>
-// </section>
+        <div class="block div-6">task-6</div>
+        <ul class="ul-6">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <div class="out-6">
+        </div>
+</section>
 
-// <section>
-// <p><b>Task 07.</b> Дана строка str7='hello world hi mazai' - преобразуйте ее в массив и разбейте по словам.
-//     Причем слова не должны содержать пробелов и присвойте a7_res. выведите на страницу. Запускаться решение
-//     должно при вызове функции t7.</p>
-// <div>
+<section>
+    <p><b>Task 7.</b></p>
+    <p>Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. При
+        повторном клике - удаляйте.</p>
+    <div>
 
-//     <button class="b-7 button-primary">task 7</button>
-//     <div class="out-7">
-//     </div>
-// </section>
+        <div class="block div-7">task-7</div>
+        <div class="out-7">
+        </div>
+</section>
 
-// <section>
-// <p><b>Task 08.</b> Дан массив a8 = [1,2,66,77,15] - преобразуйте его в строку. Разделитель - дефис.
-//     Результат
-//     присвойте a8_res. Запускаться решение должно при вызове функции t8. </p>
-// <div>
+<section>
+    <p><b>Task 8.</b></p>
+    <p>Дано checkbox .ch-8. Повесьте на него событие onchange при котором на документе
+        отключается клик правой кнопкой мыши если checkbox выбран и отключает если не выбран.</p>
+    <div>
 
-//     <button class="b-8 button-primary">task 8</button>
-//     <div class="out-8">
-//     </div>
-// </section>
+        <div class="form-control">
+            <label>
+                <input type="checkbox" class="ch-8"> включить / выключить
+                контекстное меню
+            </label>
+        </div>
+        <div class="out-8">
+        </div>
+</section>
 
-// <section>
-// <p><b>Task 09.</b> Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. Разделитель -
-//     дефис. Результат присвойте a9_res. Запускаться решение должно при вызове функции t9. Допускается лишний
-//     дефис в конце строки!!!</p>
-// <div>
+<section>
+    <p><b>Task 9.</b></p>
+    <p>Дан блок .div-9. Внутри блока - изображение 1.png. При клике правой кнопкой мыши -
+        меняйте изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения?</p>
+    <div>
 
-//     <button class="b-9 button-primary">task 9</button>
-//     <div class="out-9">
-//     </div>
-// </section>
+        <div class="div-9 block">
+            <img src="img/1.png" alt="">
+        </div>
+        <div class="out-9">
+        </div>
+</section>
 
-// <section>
-// <p><b>Task 10.</b> Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в GET строку
-//     (GET параметры). Найдите описание что такое GET строка самостоятельно. Разделитель - амперсанд.
-//     Результат присвойте a10_res. Запускаться решение должно при вызове функции t10. Допускается лишний
-//     амперсанд в конце строки!!! </p>
-// <div>
+<section>
+    <p><b>Task 10.</b></p>
+    <p>Дан блок .div-10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) -
+        меняйте изображение на 2.png.</p>
+    <div>
+
+        <div class="div-10 block">
+            <img src="img/1.png" alt="">
+        </div>
+        <div class="out-10">
+        </div>
+</section>
+
+
+<section>
+    <p><b>Task 11.</b></p>
+    <p>Дан блок .div-11. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) -
+        меняйте изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное изображение. </p>
+    <div>
+
+        <div class="div-11 block">
+            <img src="img/1.png" alt="">
+        </div>
+        <div class="out-11">
+        </div>
+</section>
+
+<section>
+    <p><b>Task 12.</b></p>
+    <p>Дан блок .div-12. Добавьте на него событие mousedown - при нажатии кнопки мыши -
+        добавляйте ему класс active. </p>
+    <div>
+
+        <div class="div-12 block">
+            task 12
+        </div>
+        <div class="out-12">
+        </div>
+</section>
+
+
+<section>
+    <p><b>Task 13.</b></p>
+    <p> Дан блок .div-13. Добавьте на него событие mousedown - при нажатии кнопки мыши -
+        добавляйте ему класс active. Добавьте ему событие mouseup - при отпускании мыши - удаляйте класс active.
+    </p>
+    <div>
+
+        <div class="div-13 block">
+            task 13
+        </div>
+        <div class="out-13">
+        </div>
+</section>
+
+<section>
+    <p><b>Task 14.</b></p>
+    <p> Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - которое,
+        при клике добавляем блоку div-14 класс active.</p>
+    <div>
+        <button class="b-14 button-primary">Task 14</button>
+        <div class="div-14 block">
+            task 14
+        </div>
+        <div class="out-14">
+        </div>
+</section>
+
+<section>
+    <p><b>Task 15.</b></p>
+    <p>Дан блок .div-15. Добавьте на него событие move. При каждом движении мыши увеличивайте
+        число внутри на 1.</p>
+    <div>
+
+        <div class="div-15 block">
+            1
+        </div>
+        <div class="out-15">
+        </div>
+</section>
+
+<section>
+    <p><b>Task 16.</b></p>
+    <p>Дан блок .div-16. Добавьте на него событие move. При каждом движении мыши увеличивайте
+        ширину блока на 1px. </p>
+    <div>
+
+        <div class="div-16 block">
+            task 16
+        </div>
+        <div class="out-16">
+        </div>
+</section>
+
+<section>
+    <p><b>Task 17.</b></p>
+    <p>Дано 2 кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые
+        включают и отключают событие move в задании 16. </p>
+    <div>
+
+        <button class="b-17_on button-primary">On</button>
+        <button class="b-17_off button-primary">Off</button>
+
+        <div class="out-17">
+        </div>
+</section>
+
+<section>
+    <p><b>Task 18.</b></p>
+    <p>Дан блок div-18. Напишите фукнцию t18 которая выводит в данный блок его ширину при
+        событии onmouseenter. </p>
+
+    <div class="div-18 block">
+        task 18
+    </div>
+    <div class="out-18">
+    </div>
+</section>
+
+<section>
+    <p><b>Task 19.</b></p>
+    <p> Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы при событии onmouseout.
+    </p>
+
+    <div class="div-19 block task-19-block">
+        task 19
+    </div>
+    <div class="out-19">
+    </div>
+</section>
+
+<section>
+    <p><b>Task 20.</b></p>
+    <p> Дан элемент progress. Напишите фукнцию t20 которая увеличивает его value на 1 при каждом событии
+        mousemove внутри progress.
+    </p>
+    <progress max="100" value="10"> */}
