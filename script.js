@@ -1,14 +1,13 @@
-//  Task 4.</b></p>
-//<p>Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4.
-//Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в
-//out-4.*/
+// //  Task 5.</b></p>
+// <p>Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс
+// active если он есть и добавляется если такого класса нет. </p>
 
 
 let divv = document.querySelector('.div-1');
 
 function t() {
 
-    document.querySelector('.out').innerHTML = divv.innerHTML;
+    divv.classList.toggle('active');;
 
 }
 document.querySelector('.div-1').ondblclick = function () {
