@@ -1,6 +1,5 @@
-// //  Task 5.</b></p>
-// <p>Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс
-// active если он есть и добавляется если такого класса нет. </p>
+// Task 7.</b></p>
+//<p>Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. Приповторном клике - удаляйте.
 
 
 let divv = document.querySelector('.div-1');
@@ -10,7 +9,7 @@ function t() {
     divv.classList.toggle('active');;
 
 }
-document.querySelector('.div-1').ondblclick = function () {
+document.querySelector('.div-1').oncontextmenu = function () {
     t();
 }
 
