@@ -1,24 +1,27 @@
- // Task 1.</b></p>
-// <p>Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и выводить
-// на экран содержимое блока (только текст). Вывод осуществляется в out-1.
+//  // Task 2.</b></p>
+//  <p>Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна
+//  возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также,
+//  выводите на экран результат. Вывод осуществляется в out-2.
 
 
-let div1 = document.querySelector('.div-1');
-let out = document.querySelector('.out');
-
-div1.onclick = () => {
-    out.innerHTML = div1.innerHTML;
-    return div1;
+function t2() {
+    if (event.altKey) {
+        return true;
+    }
+    else {
+        return false;
+    }
+    
+}
+document.querySelector('.div-1').onclick = function () {
+    document.querySelector('.out').innerHTML = t2();
 }
 
 
 
 
 
-
-
-
-{/* <h1>Unit 19. События мыши</h1>
+/* <h1>Unit 19. События мыши</h1>
 
 <section>
     <p><b>Task 1.</b></p>
@@ -260,4 +263,4 @@ div1.onclick = () => {
     <p> Дан элемент progress. Напишите фукнцию t20 которая увеличивает его value на 1 при каждом событии
         mousemove внутри progress.
     </p>
-    <progress max="100" value="10"> */}
+    <progress max="100" value="10"> */
