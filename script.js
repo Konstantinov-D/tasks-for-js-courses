@@ -1,20 +1,16 @@
-//  // Task 2.</b></p>
-//  <p>Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна
-//  возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также,
-//  выводите на экран результат. Вывод осуществляется в out-2.
+//  Task 3.</b></p>
+/* <p>Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px.
+Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
 
+let w = 200;
+function t() {
 
-function t2() {
-    if (event.altKey) {
-        return true;
-    }
-    else {
-        return false;
-    }
-    
+    document.querySelector('.div-1').style.width = w + 'px';
+    w += 5;
+
 }
 document.querySelector('.div-1').onclick = function () {
-    document.querySelector('.out').innerHTML = t2();
+    t();
 }
 
 
