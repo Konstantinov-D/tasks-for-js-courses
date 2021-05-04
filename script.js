@@ -1,23 +1,25 @@
-//Task 9.</b></p>
-/* <p><b>Task 10.</b></p>
-    <p>Дан блок .div-10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) -
-        меняйте изображение на 2.png.</p>
-    <div>
+{/* <p><b>Task 11.</b></p>
+<p>Дан блок .div-11. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) -
+    меняйте изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное изображение. </p>
+<div>
 
-        <div class="div-10 block">
-            <img src="img/1.png" alt="">
-        </div>
-        <div class="out-10">
-        </div>
-</div> */
+    <div class="div-11 block">
+        <img src="img/1.png" alt="">
+    </div>
+    <div class="out-11">
+    </div> */}
 
 
-let divv = document.querySelector('.div-1');
 
-divv.onmouseenter = () => {
+function t1() {
     document.querySelector('.div-1 img').src = "img/2.png";
 }
+function t2() {
+    document.querySelector('.div-1 img').src = "img/1.png";
+}
 
+document.querySelector('.div-1').onmouseenter = t1;
+document.querySelector('.div-1').onmouseleave = t2
 
 
 
