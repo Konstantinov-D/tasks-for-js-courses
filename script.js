@@ -1,16 +1,19 @@
-// Task 7.</b></p>
-//<p>Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. Приповторном клике - удаляйте.
+//Task 9.</b></p>
+/* <p>Дан блок .div-9. Внутри блока - изображение 1.png. При клике правой кнопкой мыши -
+меняйте изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения?</p>
+<div>
+
+<div class="div-9 block">
+    <img src="img/1.png" alt="">
+</div>
+<div class="out-9">
+</div> */
 
 
 let divv = document.querySelector('.div-1');
 
-function t() {
-
-    divv.classList.toggle('active');;
-
-}
-document.querySelector('.div-1').oncontextmenu = function () {
-    t();
+divv.onclick = () => {
+    document.querySelector('.div-1 img').src = "img/2.png";
 }
 
 
