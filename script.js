@@ -1,18 +1,20 @@
 //Task 9.</b></p>
-/* <p>Дан блок .div-9. Внутри блока - изображение 1.png. При клике правой кнопкой мыши -
-меняйте изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения?</p>
-<div>
+/* <p><b>Task 10.</b></p>
+    <p>Дан блок .div-10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) -
+        меняйте изображение на 2.png.</p>
+    <div>
 
-<div class="div-9 block">
-    <img src="img/1.png" alt="">
-</div>
-<div class="out-9">
+        <div class="div-10 block">
+            <img src="img/1.png" alt="">
+        </div>
+        <div class="out-10">
+        </div>
 </div> */
 
 
 let divv = document.querySelector('.div-1');
 
-divv.onclick = () => {
+divv.onmouseenter = () => {
     document.querySelector('.div-1 img').src = "img/2.png";
 }
 
