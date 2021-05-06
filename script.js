@@ -1,14 +1,25 @@
-// Task 2.</b></p>
-{/* <p> Создайте функцию t2 которая записывает в LS массив a2 = [7,6,5]. Ключ a2. Проверьте что происходит при
-повторном вызове функции. Запускается ф-я по кнопкуе b-2. */}
+// Task 3.</b></p>
+//<p> При нажатии кнопки t3 выведите из LS сохранненный массив a2. Выведите в out-3 в формате ключ пробел
+//значение перенос строки.
 
 
 
-let btn = document.querySelector("button")
+let btn = document.querySelector("button");
+let out = document.querySelector(".out");
+let a3 = [3,4,5,6,7];
+
 btn.onclick = () => {
-    let a = [7,6,5]
-    localStorage.setItem('a2', a);
 
+    let b = localStorage.getItem('a2');
+    let a = localStorage.setItem('a3',JSON.stringify(a3));
+
+    
+    b = JSON.parse(b);
+
+    for (let i = 0; i < b.length; i++) {
+        out.innerHTML += b[i] + ' ';
+       
+    }
 }
 
 
@@ -23,7 +34,7 @@ btn.onclick = () => {
 
 
 
-{/* <p><b>Task 1.</b></p>
+/* <p><b>Task 1.</b></p>
             <p>Создайте функцию t1 которая записывает в LS ключ 5 со значением 11. Проверьте что происходит при
                 повторном вызове функции. Запускается ф-я по кнопкуе b-1. </p>
             <button class="button-primary b-1">Task-1</button>
@@ -171,4 +182,4 @@ Pricing
 API
 Training
 Blog
-About */}
+About */
