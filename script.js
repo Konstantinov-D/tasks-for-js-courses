@@ -1,23 +1,16 @@
-// Task 7.</b></p>
-/* <p> Создайте input i-7 куда пользователь может вводить числа и строки. Создайте массив a7. Когда
-пользователь нажимает кнопку b-7 число должно добавляться в массив. Массив должен сохраняться в LS с
-ключем a7.</p>
-<div class="form-control">
-<label>Введите значение</label>
-<input type="text" placeholder="Enter some info" class="i-7"> */
-
-
+// Task 8.</b></p>
+//             <p>Создайте функцию t8 при запуске которой из a7 удаляется последний элемент. После чего массив сохраняется
+//                 в LS с ключем a7. Использовать массив из предыдущего задания.</p>
 
 
 let btn = document.querySelector("button");
 let out = document.querySelector(".out");
 let inp = document.querySelector('input');
-let a7 = [];
+let a7 = [1,2,3,4,5];
 
 btn.onclick = () => {
 
-        a7.push(+inp.value)
-  
+    a7.pop()
     localStorage.setItem('a7',JSON.stringify(a7))
     
 }
