@@ -1,19 +1,20 @@
-// Task 4.</b></p>
-//<p>Создайте функцию t4 которая записывает в LS массив a4 = {hello: world, hi:mahai}. Ключ a4. Проверьте что
-//происходит при повторном вызове функции. Запускается ф-я по кнопкуе b-4.
+// Task 5.</b></p>
+//<p> При нажатии кнопки t5 выведите из LS сохранненный массив a4. Выведите в out-4 в формате ключ пробел
+//значение перенос строки.
 
 
 
 let btn = document.querySelector("button");
 let out = document.querySelector(".out");
-let a4 = {
-    "hello": 'world',
-    "hi": 'mahai'
-};
+
 
 btn.onclick = () => {
-
-    localStorage.setItem('a4',JSON.stringify(a4))
+    let res = localStorage.getItem('a4')
+    res = JSON.parse(res)
+    for (let key in res) {
+        out.innerHTML += key + '&nbsp' + res[key] + '<br>'
+    }
+    
 }
 
 
