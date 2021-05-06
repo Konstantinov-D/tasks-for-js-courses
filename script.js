@@ -1,21 +1,114 @@
-// Task 8.</b></p>
-//             <p>Создайте функцию t8 при запуске которой из a7 удаляется последний элемент. После чего массив сохраняется
-//                 в LS с ключем a7. Использовать массив из предыдущего задания.</p>
+// task 10
 
+let card = '';
+card = {
+    "apple": 3,
+    "grape": 2
+}
+const column = ['Название товара', ' ', 'Количество'];
+let out = document.querySelector('.out-10');
 
-let btn = document.querySelector("button");
-let out = document.querySelector(".out");
-let inp = document.querySelector('input');
-let a7 = [1,2,3,4,5];
-
-btn.onclick = () => {
-
-    a7.pop()
-    localStorage.setItem('a7',JSON.stringify(a7))
-    
+function t10() {
+    localStorage.setItem('card', JSON.stringify(card));
+    t11();
 }
 
-
+function t11() {
+    out.innerHTML = '';
+    let c = localStorage.getItem('card', JSON.stringify(card));
+    c = JSON.parse(c);
+    let table = document.createElement('table');
+    let sumGoods = 0;
+    // формирование строки названия колонок
+    let tr = document.createElement('tr');
+    for (let j = 0; j < column.length; j++) {
+        let th = document.createElement('th');
+        tr.appendChild(th);
+        th.innerHTML = column[j];
+    }
+    table.appendChild(tr);
+    // формирование строк таблицы вывода массива card
+    for (let key in card) {
+        let tr = document.createElement('tr');
+        for (let k = 0; k < 4; k++) {
+            let td = document.createElement('td');
+            tr.appendChild(td);
+            // первая колонка таблицы - название товара
+            if (k == 0) {
+                td.innerHTML = key;
+            }
+            // вторая колонка таблицы - кнопка "+"
+            if (k == 1) {
+                let btnPlus = document.createElement('button');
+                td.appendChild(btnPlus);
+                btnPlus.innerHTML = '+';
+                btnPlus.classList.add('btnPlus');
+                btnPlus.setAttribute('data', [key]);
+            }
+            // третья колонка таблицы - количество товара
+            if (k == 2) {
+                td.innerHTML = card[key];
+            }
+            // четвертая колонка таблицы - кнопка "-"
+            if (k == 3) {
+                let btnMinus = document.createElement('button');
+                td.appendChild(btnMinus);
+                btnMinus.innerHTML = '-';
+                btnMinus.classList.add('btnMinus');
+                btnMinus.setAttribute('data', [key]);
+            }
+        }
+        table.appendChild(tr);
+    }
+    // формирование строки footer
+    let trFoot = document.createElement('tr');
+    for (let j = 0; j <= 2; j++) {
+        let tdFoot = document.createElement('td');
+        tdFoot.classList.add('foot');
+        trFoot.appendChild(tdFoot);
+        if (j == 1) {
+            tdFoot.innerHTML = 'Общее количество';
+        }
+        if (j == 2) {
+            for (let key in card) {
+                sumGoods += card[key];
+            }
+            tdFoot.innerHTML = sumGoods;
+        }
+        table.appendChild(trFoot);
+    }
+    out.appendChild(table);
+    // повесим событие на все кнопки "+"
+    let btnsPlus = document.querySelectorAll('.btnPlus');
+    for (let i = 0; i < btnsPlus.length; i++) {
+        btnsPlus[i].onclick = function () {
+            let sumPlus = card[this.getAttribute('data')] + 1;
+            card[this.getAttribute('data')] = sumPlus;
+            console.log(card);
+            t10();
+        }
+    }
+    // повесим событие на все кнопки "-"
+    let btnsMinus = document.querySelectorAll('.btnMinus');
+    for (let i = 0; i < btnsMinus.length; i++) {
+        btnsMinus[i].onclick = function () {
+            let sumMinus = card[this.getAttribute('data')] - 1;
+            if (sumMinus == -1) {
+                delete card[this.getAttribute('data')];
+                return t10();
+            }
+            else {
+                card[this.getAttribute('data')] = sumMinus;
+                t10();
+            }
+        }
+    }
+    if (sumGoods == 0) {
+        localStorage.removeItem('card');
+        table.innerHTML = 'Корзина пуста';
+    }
+}
+document.querySelector('.b-10').onclick = t10;
 
 
 
