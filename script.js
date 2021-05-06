@@ -1,6 +1,7 @@
-// Task 5.</b></p>
-//<p> При нажатии кнопки t5 выведите из LS сохранненный массив a4. Выведите в out-4 в формате ключ пробел
-//значение перенос строки.
+//  <p><b>Task 6.</b></p>
+//<p>Создайте функцию t6 которая очищает весь LS. Запуск по кнопке b-6</p>
+//<button class="button-primary b-6">Task-6</button>
+
 
 
 
@@ -9,11 +10,7 @@ let out = document.querySelector(".out");
 
 
 btn.onclick = () => {
-    let res = localStorage.getItem('a4')
-    res = JSON.parse(res)
-    for (let key in res) {
-        out.innerHTML += key + '&nbsp' + res[key] + '<br>'
-    }
+    localStorage.clear();
     
 }
 
