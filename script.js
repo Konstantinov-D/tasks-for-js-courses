@@ -1,16 +1,24 @@
-//  <p><b>Task 6.</b></p>
-//<p>Создайте функцию t6 которая очищает весь LS. Запуск по кнопке b-6</p>
-//<button class="button-primary b-6">Task-6</button>
+// Task 7.</b></p>
+/* <p> Создайте input i-7 куда пользователь может вводить числа и строки. Создайте массив a7. Когда
+пользователь нажимает кнопку b-7 число должно добавляться в массив. Массив должен сохраняться в LS с
+ключем a7.</p>
+<div class="form-control">
+<label>Введите значение</label>
+<input type="text" placeholder="Enter some info" class="i-7"> */
 
 
 
 
 let btn = document.querySelector("button");
 let out = document.querySelector(".out");
-
+let inp = document.querySelector('input');
+let a7 = [];
 
 btn.onclick = () => {
-    localStorage.clear();
+
+        a7.push(+inp.value)
+  
+    localStorage.setItem('a7',JSON.stringify(a7))
     
 }
 
