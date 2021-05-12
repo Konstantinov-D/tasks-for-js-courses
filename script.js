@@ -1,15 +1,18 @@
-// РЕКУРСИЯ
+// ЗАМЫКАНИЯ
 
-// функция вызывает саму себя
+// функция видит переменные только внутри, чтобы никто не изменил переменные во время правки
 
-let offset = 0;
-
-function move() {
-    offset = offset + 5;
-    document.querySelector(".test").style.left = offset + "px";
-    if (offset > 200) {
-        return true;
+function t1(){
+    let a = 0;
+    return function () {
+        a = a + 1;
+        return a;
     }
-    setTimeout(move, 500);
 }
-document.querySelector("button").onclick = move;
+
+let b = t1();
+console.log(b);
+console.log(b());
+console.log(b());
+console.log(b());
+console.log(b());
