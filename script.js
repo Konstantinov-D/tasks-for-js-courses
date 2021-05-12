@@ -2,14 +2,14 @@
 
 // функция вызывает саму себя
 
-let a = 0;
+let offset = 0;
 
-function rec() {
-    a = a + 1;
-    console.log(a);
-    if (a > 10){
-        return a;
+function move() {
+    offset = offset + 5;
+    document.querySelector(".test").style.left = offset + "px";
+    if (offset > 200) {
+        return true;
     }
-    rec();
+    setTimeout(move, 500);
 }
-rec();
+document.querySelector("button").onclick = move;
